@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <h1>SELAMAT DATANG DI WEBSITE PENGADUAN MUTU</h1>
+     <a href="form_pengaduan.php"><button>Buat Pengaduan</button></a>
+     <a href="cari_pengaduan.php"><button>Cari Pengaduan</button></a>
+</body>
+</html>
