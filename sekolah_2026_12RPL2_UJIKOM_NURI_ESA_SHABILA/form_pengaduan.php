@@ -12,10 +12,23 @@
           <input type="text"/>
           <br/>
 
+          <label for="">Kategori</label>
+          <select>
+               <option>Fasilitas</option>
+               <option>Lingkungan</option>
+               <option>Pembelajaran</option>
+          </select>
+          <br/>
+
           <label for="">Lokasi</label>
           <input type="text"/>
+          <br/>
           
+          <label for="Keterangan">Keterangan</label><br/>
+          <textarea></textarea>
+          <br/>
 
+          <button>Kirim Pengaduan</button>
      </form>
 </body>
 </html>
