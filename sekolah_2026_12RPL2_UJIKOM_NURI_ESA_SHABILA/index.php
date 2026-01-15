@@ -6,8 +6,10 @@
      <title>Document</title>
 </head>
 <body>
-     <h1>SELAMAT DATANG DI WEBSITE PENGADUAN MUTU</h1>
-     <a href="form_pengaduan.php"><button>Buat Pengaduan</button></a>
-     <a href="cari_pengaduan.php"><button>Cari Pengaduan</button></a>
+     <div>
+          <div class="judul"><h1>SELAMAT DATANG DI WEBSITE PENGADUAN MUTU</h1></div>
+          <div class="tombol"><a href="form_pengaduan.php"><button>Buat Pengaduan</button></a>
+          <a href="cari_pengaduan.php"><button>Cari Pengaduan</button></a></div>
+     </div>
 </body>
 </html>
