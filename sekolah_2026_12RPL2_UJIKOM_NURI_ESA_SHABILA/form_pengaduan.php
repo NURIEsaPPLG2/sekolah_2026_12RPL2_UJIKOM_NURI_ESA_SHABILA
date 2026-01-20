@@ -3,17 +3,17 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+     <title>Form Pengaduan</title>
 </head>
 <body>
      <h1>HALAMAN PENGADUAN</h1>
-     <form action="">
+     <form action="detail_pengaduan.php" method="post">
           <label for="">NIS</label><br/>
-          <input type="text"/>
+          <input type="text" name="nis"/>
           <br/>
 
           <label for="">Kategori</label>
-          <select>
+          <select name="kategori">
                <option>Fasilitas</option>
                <option>Lingkungan</option>
                <option>Pembelajaran</option>
@@ -21,11 +21,11 @@
           <br/>
 
           <label for="">Lokasi</label>
-          <input type="text"/>
+          <input type="text" name="lokasi"/>
           <br/>
           
           <label for="Keterangan">Keterangan</label><br/>
-          <textarea></textarea>
+          <textarea name="keterangan"></textarea>
           <br/>
 
           <button>Kirim Pengaduan</button>
