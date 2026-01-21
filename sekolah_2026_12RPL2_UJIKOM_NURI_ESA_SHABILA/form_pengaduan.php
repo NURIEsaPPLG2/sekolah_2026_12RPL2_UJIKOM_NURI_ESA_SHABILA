@@ -14,9 +14,9 @@
 
           <label for="">Kategori</label>
           <select name="kategori">
-               <option>Fasilitas</option>
-               <option>Lingkungan</option>
-               <option>Pembelajaran</option>
+               <option value="1">Fasilitas</option>
+               <option value="2">Lingkungan</option>
+               <option value="3">Pembelajaran</option>
           </select>
           <br/>
 
