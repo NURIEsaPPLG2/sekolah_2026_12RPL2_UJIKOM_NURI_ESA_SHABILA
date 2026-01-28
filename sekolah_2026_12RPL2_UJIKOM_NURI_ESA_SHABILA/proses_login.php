@@ -1,26 +1,31 @@
 <?php
-     session_start();
-     include 'koneksi.php';
+session_start();
+include 'koneksi.php';
 
-     $username = $_POST['username'];
-     $password = $_POST['password'];
-     $query = mysqli_query($koneksi, "SELECT * FROM user WHERE username='$username' AND password='$password'");
-     $data = mysqli_fetch_assoc($query);
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-     if($data)
-          {
-               $_SESSION['username'] = $data['username'];
-               $_SESSION['password'] = $data['password'];
+$query = mysqli_query($koneksi, "SELECT * FROM user WHERE username='$username'");
+$data = mysqli_fetch_assoc($query);
 
-               if($data['role']=="admin"){
-                    header("location:admin/dashboard_admin.php");
-               }
-               elseif($data['role']=="siswa"){
-                    header("location:dashboard_siswa.php");
-               }
-          }
-          else{
-               echo"login gagal";
-          }
+if ($data) {
+    if (password_verify($password, $data['password'])) {
 
+        $_SESSION['username'] = $data['username'];
+        $_SESSION['role'] = $data['role'];
+
+        if ($data['role'] == "admin") {
+            header("Location: admin/dashboard_admin.php");
+        } else if ($data['role'] == "siswa") {
+            header("Location: dashboard_siswa.php");
+        }
+
+    } else {
+        echo "Password salah";
+    }
+} else {
+    echo "Username tidak ditemukan";
+}
 ?>
+
+
