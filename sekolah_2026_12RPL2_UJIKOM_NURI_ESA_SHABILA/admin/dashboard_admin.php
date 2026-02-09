@@ -46,7 +46,7 @@
 </head>
 <body>
     <div>
-        <a href="login.html" class="logout">Logout</a><br/>
+        <a href="login.php" class="logout">Logout</a><br/>
         <p>SELAMAT DATANG ADMIN DI WEBSITE PENGADUAN SARANA SEKOLAH</p>
         <a href=""><button>Tambah Data Siswa</button></a><br/>
         <a href=""><button>Data Siswa</button></a><br/>
