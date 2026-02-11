@@ -21,10 +21,16 @@ if ($data) {
         }
 
     } else {
-        echo "Password salah";
+        echo "<script>
+                alert('Password salah!');
+                window.location='login.php';
+              </script>";
     }
 } else {
-    echo "Username tidak ditemukan";
+    echo "<script>
+                alert('Username tidak ditemukan!');
+                window.location='login.php';
+              </script>";
 }
 ?>
 
