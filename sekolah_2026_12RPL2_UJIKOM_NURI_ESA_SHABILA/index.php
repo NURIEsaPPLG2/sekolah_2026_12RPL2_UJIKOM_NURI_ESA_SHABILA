@@ -25,7 +25,7 @@
             background: rgb(72, 72, 255);
             color: white;
             border: none;
-            border-radius: 5%;
+            border-radius: 15px;
             font-family: monospace;
             font-size: 30px;
             cursor: pointer;
