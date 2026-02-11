@@ -26,7 +26,7 @@
             background: rgb(72, 72, 255);
             color: white;
             border: none;
-            border-radius: 5%;
+            border-radius: 15px;
             font-family: monospace;
             font-size: 20px;
             cursor: pointer;   
@@ -46,7 +46,7 @@
 </head>
 <body>
     <div>
-        <a href="login.php" class="logout">Logout</a><br/>
+        <a href="../login.php" class="logout">Logout</a><br/>
         <p>SELAMAT DATANG ADMIN DI WEBSITE PENGADUAN SARANA SEKOLAH</p>
         <a href=""><button>Tambah Data Siswa</button></a><br/>
         <a href=""><button>Data Siswa</button></a><br/>
