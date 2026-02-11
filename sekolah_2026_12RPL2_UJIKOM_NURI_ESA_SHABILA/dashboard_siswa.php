@@ -35,7 +35,7 @@ if (!isset($_SESSION['username'])) {
             background: rgb(72, 72, 255);
             color: white;
             border: none;
-            border-radius: 5%;
+            border-radius: 15px;
             font-family: monospace;
             font-size: 20px;
             cursor: pointer;   
@@ -58,11 +58,12 @@ if (!isset($_SESSION['username'])) {
         <a href="login.php" class="logout">Logout</a><br/>
         <p>SELAMAT DATANG DI WEBSITE PENGADUAN SARANA SEKOLAH</p>
         <a href="form_pengaduan.php"><button>Buat Pengaduan</button></a><br/>
-        <a href="cari_pengaduan.php"><button>Data Pengaduan</button></a><br/>
-        <a href="ganti_password.php"><button>Ganti Password</button></a><br/>
+        <a href=""><button>Data Pengaduan</button></a><br/>
+        <a href=""><button>Ganti Password</button></a><br/>
     </div>
 </body>
 </html>
+
 
 
 
