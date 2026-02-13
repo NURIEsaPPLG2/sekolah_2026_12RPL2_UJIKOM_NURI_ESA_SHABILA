@@ -58,7 +58,7 @@ if (!isset($_SESSION['username'])) {
         <a href="login.php" class="logout">Logout</a><br/>
         <p>SELAMAT DATANG DI WEBSITE PENGADUAN SARANA SEKOLAH</p>
         <a href="form_pengaduan.php"><button>Buat Pengaduan</button></a><br/>
-        <a href=""><button>Data Pengaduan</button></a><br/>
+        <a href="data_pengaduan.php"><button>Data Pengaduan</button></a><br/>
         <a href=""><button>Ganti Password</button></a><br/>
     </div>
 </body>

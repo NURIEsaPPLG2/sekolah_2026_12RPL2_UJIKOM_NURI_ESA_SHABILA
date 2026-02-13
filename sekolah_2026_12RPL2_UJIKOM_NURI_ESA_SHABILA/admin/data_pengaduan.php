@@ -3,10 +3,10 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+     <title>histori/data pengaduan</title>
 </head>
 <body>
-     <h1>DATA PENGADUAN</h1>
+     <h1>HISTORI/DATA PENGADUAN</h1>
 
      <table border="1" cellpadding="10" cellspacing="0">
           <tr>
@@ -16,6 +16,8 @@
                <th>Lokasi</th>
                <th>Keterangan</th>
                <th>Status</th>
+               <th>Tanggal</th>
+               <th>Feedback</th>
                <th>Detail</th>
           </tr>
 
@@ -36,6 +38,8 @@
                <td><?= $data['lokasi'] ?></td>
                <td><?= $data['keterangan'] ?></td>
                <td><?= $data['status'] ?></td>
+               <td><?= $data['tanggal'] ?></td>
+               <td><?= $data['feedback'] ?></td>
                <td>
                     <a href="detail_pengaduan.php?id=<?= $data['id_pelaporan'] ?>">
                          <button>Detail</button>

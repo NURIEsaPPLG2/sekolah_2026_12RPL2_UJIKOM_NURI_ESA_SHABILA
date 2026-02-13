@@ -48,10 +48,10 @@
     <div>
         <a href="../login.php" class="logout">Logout</a><br/>
         <p>SELAMAT DATANG ADMIN DI WEBSITE PENGADUAN SARANA SEKOLAH</p>
-        <a href=""><button>Tambah Data Siswa</button></a><br/>
+        <a href="tambah_siswa.php"><button>Tambah Data Siswa</button></a><br/>
         <a href=""><button>Data Siswa</button></a><br/>
         <a href=""><button>Tambah Kategori</button></a><br/>
-        <a href=""><button>Histori Pengaduan</button></a><br/>
+        <a href="data_pengaduan.php"><button>Histori/Data Pengaduan</button></a><br/>
     </div>
 </body>
 </html>

@@ -47,7 +47,7 @@
      <center>
      <div>
           <h1>BUAT PENGADUAN</h1>
-          <form action="detail_pengaduan.php" method="post">
+          <form action="proses_pengaduan.php" method="post">
                <label for="">NIS</label><br/>
                <input type="text" name="nis"/>
                <br/>
