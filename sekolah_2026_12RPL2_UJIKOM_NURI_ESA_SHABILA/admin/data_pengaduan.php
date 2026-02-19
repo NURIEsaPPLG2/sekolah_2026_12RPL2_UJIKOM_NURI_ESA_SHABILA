@@ -4,11 +4,57 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>histori/data pengaduan</title>
+     <style>
+     body{
+          margin: 0;
+          min-height: 100vh;
+          background: linear-gradient(to right, #187bcd, #d0efff);
+          padding: 20px 40px;
+     }
+     p{
+          font-size: 40px;
+          font-family: tahoma;  
+          text-align: center;         
+     }
+     .tabel-data-admin{
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+          background: white;
+          font-family: Arial, sans-serif;
+          box-shadow: 0 4px 8px rgba(0,0,0,1);
+     }
+     .tabel-data-admin th{
+          background: blue;
+          color: white;
+          padding: 15px;
+          text-align: center;
+     } 
+     nav{
+          height: 90px;
+     }
+     a{
+          font-family: monospace;
+          color: black;
+          font-size: 27px;
+          text-decoration: none;
+          position: absolute;
+          right: 45px;
+          top: 35px;
+          cursor: pointer;
+     }   
+     a:active{
+          color: white;
+     }         
+     </style>
 </head>
 <body>
-     <h1>HISTORI/DATA PENGADUAN</h1>
+     <nav>
+          <a href="dashboard_admin.php">Dashboard</a>
+     </nav>
+     <p><b>HISTORI/DATA PENGADUAN</b></p>
 
-     <table border="1" cellpadding="10" cellspacing="0">
+     <table border="1" cellpadding="10" cellspacing="0" class="tabel-data-admin">
           <tr>
                <th>No</th>
                <th>ID Kategori</th>
