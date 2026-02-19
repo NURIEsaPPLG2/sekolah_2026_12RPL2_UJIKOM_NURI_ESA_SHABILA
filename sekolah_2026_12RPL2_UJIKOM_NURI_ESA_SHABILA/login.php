@@ -6,15 +6,28 @@
      <title>Login</title>
      <style>
         body{
-            background: #a5d8ff;
+            background: linear-gradient(to right, #187bcd, #d0efff);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         div{
             background: #a5d8ff;
-            padding-top: 20px;
+            padding: 20px;
+            width: 350px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 3);
+            position: relative;
         }
         h1{
-            font-family: monospace;
-            font-size: 60px;
+            font-family: tahoma;
+            font-size: 50px;
         }
         label{
             font-family: monospace;
@@ -24,25 +37,35 @@
             margin-bottom: 20px;
         }
         button{
-            width: 80px;
-            height: 40px;
+            width: 90px;
+            height: 50px;
             background: rgb(72, 72, 255);
             color: white;
             border: none;
             border-radius: 10px;
             font-family: monospace;
-            font-size: 15px;
+            font-size: 20px;
             cursor: pointer;
+            margin-bottom: 15px;
         }
         button:active{
             background: rgb(158, 158, 255);
             color: rgb(226, 226, 226);       
         }
+        a{
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 20px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div>
-        <center>
+        <a href="index.php">Back</a>
         <h1>LOGIN</h1>
         <form action="proses_login.php" method="post">
             <label for="">Username</label><br/>
@@ -54,8 +77,7 @@
             <br/>
                  
             <button>Login</button>
-        </form>
-        </center>
+        </form>       
     </div>
      
 </body>
