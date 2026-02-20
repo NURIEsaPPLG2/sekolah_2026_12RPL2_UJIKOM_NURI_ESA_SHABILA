@@ -72,9 +72,9 @@
           <a href="dashboard_siswa.php">Dashboard</a>
           <h1>BUAT PENGADUAN</h1>
           <form action="proses_pengaduan.php" method="post">
-               <label for="">NIS</label><br/>
+               <!-- <label for="">NIS</label><br/>
                <input type="text" name="nis"/>
-               <br/>
+               <br/> -->
                <label for="">Kategori</label><br/>
                <select name="kategori">
                     <option value="1">Fasilitas</option>

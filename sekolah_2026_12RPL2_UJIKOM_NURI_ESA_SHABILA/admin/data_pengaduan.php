@@ -33,7 +33,7 @@
      nav{
           height: 90px;
      }
-     a{
+     nav a{
           font-family: monospace;
           color: black;
           font-size: 27px;
@@ -43,7 +43,7 @@
           top: 35px;
           cursor: pointer;
      }   
-     a:active{
+     nav a:active{
           color: white;
      }         
      </style>
@@ -57,7 +57,8 @@
      <table border="1" cellpadding="10" cellspacing="0" class="tabel-data-admin">
           <tr>
                <th>No</th>
-               <th>ID Kategori</th>
+               <th>ID Pengaduan</th>
+               <th>nis</nis>               
                <th>Nama Kategori</th>
                <th>Lokasi</th>
                <th>Keterangan</th>
@@ -79,7 +80,8 @@
 
           <tr>
                <td><?= $no++ ?></td>
-               <td><?= $data['id_kategori'] ?></td>
+               <td><?= $data['id_pelaporan'] ?></td>
+               <td><?= $data['nis'] ?></td>               
                <td><?= $data['ket_kategori'] ?></td>
                <td><?= $data['lokasi'] ?></td>
                <td><?= $data['keterangan'] ?></td>

@@ -53,6 +53,7 @@
      <table border="1" cellpadding="10" cellspacing="0" class="tabel-data">
           <tr>
                <th>No</th>
+               <th>ID Pengaduan</th>
                <th>Nis</th>
                <th>Nama Kategori</th>
                <th>Lokasi</th>
@@ -70,6 +71,7 @@
           ?>
           <tr>
                <td><?php echo $no++; ?></td>
+               <td><?php echo $data['id_pelaporan']; ?></td>
                <td><?php echo $data['nis']; ?></td>
                <td><?php echo $data['ket_kategori']; ?></td>
                <td><?php echo $data['lokasi']; ?></td>
