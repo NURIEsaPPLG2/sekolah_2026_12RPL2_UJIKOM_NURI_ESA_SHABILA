@@ -27,9 +27,17 @@
           padding: 15px;
           text-align: center;
      }
-     nav{
-          height: 90px;
-     }
+     img{
+            width: 120px;
+            height: 120px;
+         }       
+         nav{
+            display: flex;
+            align-items: center;      
+            justify-content: space-between; 
+            padding: 0 40px;
+            height: 90px;
+         }
      a{
           font-family: monospace;
           color: black;
@@ -47,6 +55,7 @@
 </head>
 <body>
      <nav>
+          <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/logo_mutu_png_transparant-removebg-preview-1.png">
           <a href="dashboard_siswa.php">Dashboard</a>
      </nav>
      <p><b>DATA PENGADUAN</b></p>

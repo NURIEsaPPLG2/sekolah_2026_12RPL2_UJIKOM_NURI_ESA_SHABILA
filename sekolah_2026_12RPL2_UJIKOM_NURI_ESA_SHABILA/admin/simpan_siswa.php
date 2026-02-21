@@ -1,14 +1,12 @@
 <?php
+$koneksi = mysqli_connect("localhost","root","","ujikom_12rpl2_nuriesa");
+
 if (isset($_POST['username'])) {
 
      $nama       =$_POST['username'];
      $code  =password_hash($_POST['password'],PASSWORD_DEFAULT); 
      $nomor   =$_POST['nis'];
      $ruangan =$_POST['kelas'];
-
-$koneksi = mysqli_connect("localhost","root","","ujikom_12rpl2_nuriesa");
-
-
 
 
 $query = "INSERT INTO user (id, username, password, nis, kelas) VALUES (NULL, '$nama', '$code', '$nomor', '$ruangan')";

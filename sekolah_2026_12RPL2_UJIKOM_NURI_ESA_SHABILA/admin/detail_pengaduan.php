@@ -38,49 +38,127 @@ if (!$data) {
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>detail pengaduan</title>
+     <style>
+          body{
+               background: linear-gradient(to right, #187bcd, #d0efff);
+               height: 100vh;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+          }     
+          .container{
+               background: #a5d8ff;
+               padding: 30px 40px;
+               border-radius: 15px;
+               width: 500px;
+               box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+          }
+          h2{
+               font-family: tahoma;
+               text-align: center;
+               margin-bottom: 25px;
+          }
+          table{
+               width: 100%;
+               border-collapse: collapse;
+          }
+          table td{
+               padding: 10px;
+               vertical-align: top;
+          }
+          table tr td:first-child{
+               font-weight: bold;
+               font-family: monospace;
+               font-size: 17px;
+               width: 35%;
+          }
+          .isi{
+               font-family: monospace;
+               font-size: 14px;
+               font-weight: bold;
+          }
+          select, textarea{
+               width: 100%;
+               padding: 8px;
+               border-radius: 6px;
+               border: 1px solid ;
+               font-size: 14px;
+               font-family: monospace;
+               font-weight: bold;
+          }
+          textarea{
+               resize: none;
+          }
+          .actions{
+               margin-top: 20px;
+               display: flex;
+               justify-content: space-between;
+          }
+          button{
+               background: #187bcd;
+               color: white;
+               border: none;
+               padding: 10px 18px;
+               border-radius: 8px;
+               cursor: pointer;
+               font-size: 14px;
+          }
+          button:active{
+               background: rgb(158, 158, 255);
+          }
+          a{
+               color: white;
+               text-decoration: none;
+          }
+     </style>
 </head>
 <body>
-     <h2>Detail Pengaduan</h2>
-     <form method="POST">
-          <table border="1" cellpadding="10" cellspacing="0">
-               <tr>
-                   <td>ID Pelaporan</td> 
-                   <td><?= $data['id_pelaporan'] ?></td>
-               </tr>
-               <tr>
-                    <td>Kategori</td>
-                    <td><?= $data['ket_kategori'] ?></td>
-               </tr>
-               <tr>
-                    <td>Lokasi</td>
-                    <td><?= $data['lokasi'] ?></td>
-               </tr>
-               <tr>
-                    <td>Keterangan</td>
-                    <td><?= $data['keterangan'] ?></td>
-               </tr>
+     <div class="container">
+          <h2>Detail Pengaduan</h2>
 
-               <tr>
-                    <td>Status</td>
-                    <td>
-                         <select name="status">
-                              <option value="menunggu" <?= $data['status'] == 'menunggu' ? 'selected' : '' ?>>Menunggu</option>
-                              <option value="proses" <?= $data['status'] == 'proses' ? 'selected' : '' ?>>Proses</option>
-                              <option value="selesai" <?= $data['status'] == 'selesai' ? 'selected' : '' ?>>Selesai</option>
-                         </select>
-                    </td>
-               </tr>
+          <form method="POST">
+               <table>
+                    <tr>
+                         <td>ID Pelaporan:</td> 
+                         <td class="isi"><?= $data['id_pelaporan'] ?></td>
+                    </tr>
+                    <tr>
+                         <td>Kategori:</td>
+                         <td class="isi"><?= $data['ket_kategori'] ?></td>
+                    </tr>
+                    <tr>
+                         <td>Lokasi:</td>
+                         <td class="isi"><?= $data['lokasi'] ?></td>
+                    </tr>
+                    <tr>
+                         <td>Keterangan:</td>
+                         <td class="isi"><?= $data['keterangan'] ?></td>
+                    </tr>
 
-               <tr>
-                    <td>Feedback</td>
-                    <td>
-                         <textarea name="feedback" rows="4" cols="40"><?= $data['feedback'] ?></textarea>
-                    </td>
-               </tr>
-          </table>
-          <br/>
-          <button type="submit" name="simpan">Simpan</button>
-          <a href="data_pengaduan.php">Kembali</a>
-     </form>
+                    <tr>
+                         <td>Status:</td>
+                         <td>
+                              <select name="status">
+                                   <option value="menunggu" <?= $data['status'] == 'menunggu' ? 'selected' : '' ?>>Menunggu</option>
+                                   <option value="proses" <?= $data['status'] == 'proses' ? 'selected' : '' ?>>Proses</option>
+                                   <option value="selesai" <?= $data['status'] == 'selesai' ? 'selected' : '' ?>>Selesai</option>
+                              </select>
+                         </td>
+                    </tr>
+
+                    <tr>
+                         <td>Feedback:</td>
+                         <td>
+                              <textarea name="feedback" rows="4"><?= $data['feedback'] ?></textarea>
+                         </td>
+                    </tr>
+               </table>
+
+               <div class="actions">
+                    <button><a href="data_pengaduan.php">Kembali</a></button>
+                    <button type="submit" name="simpan">Simpan</button>                   
+               </div>
+          </form>
+     </div>
 </body>
 </html>
