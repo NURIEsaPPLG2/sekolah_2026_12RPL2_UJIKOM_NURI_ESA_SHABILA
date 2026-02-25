@@ -41,7 +41,7 @@
             font-weight: bold;
             text-align: center;
          }
-         .form-siswa{
+         .form-kategori{
             display: flex;
             gap: 20px;           
             align-items: flex-end;   
@@ -79,28 +79,18 @@
          <a href="dashboard_admin.php">Dashboard</a>
       </nav>
 
-         <p>TAMBAH SISWA</p>
+         <p>TAMBAH KATEGORI</p>
 
-      <form action="simpan_siswa.php" method="POST" class="form-siswa">  
+      <form action="simpan_kategori.php" method="POST" class="form-kategori">  
 
          <div class="form-item">  
-            <label for="">NIS</label> <br/>
-            <input type="text" name="nis" required/>
+            <label for="">ID Kategori</label> <br/>
+            <input type="text" name="id_kategori" required/>
          </div>
      
          <div class="form-item">
-            <label for="">USERNAME</label> <br/>
-            <input type="text" name="username" required/>
-         </div>
-     
-         <div class="form-item">
-            <label for="">KELAS</label> <br/>
-            <input type="text" name="kelas" required/>    
-         </div>
-     
-         <div class="form-item">
-            <label for="">PASSWORD</label> <br/>
-            <input type="text" name="password" requred/>      
+            <label for="">Nama Kategori</label> <br/>
+            <input type="text" name="ket_kategori" required/>
          </div>
      
          <div class="form-item">
@@ -110,11 +100,12 @@
       </form>
 
     <?php
-    include "data_siswa.php";
+    include "data_kategori.php";
     ?>
 
 </body>
 </html>
+
 
 
 

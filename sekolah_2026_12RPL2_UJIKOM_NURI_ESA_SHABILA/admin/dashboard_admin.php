@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit;
 }
 ?>
@@ -69,7 +69,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
 <body>
     <nav>
         <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/logo_mutu_png_transparant-removebg-preview-1.png">
-        <a href="../login.php" class="logout">Logout</a>
+        <a href="../logout.php" class="logout">Logout</a>
     </nav>
     <div>
         <p>
@@ -78,7 +78,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
             DI WEBSITE PENGADUAN SARANA SEKOLAH</b>
         </p>
         <a href="tambah_siswa.php"><button>Tambah Data Siswa</button></a><br/>
-        <a href=""><button>Tambah Kategori</button></a><br/>
+        <a href="tambah_kategori.php"><button>Tambah Kategori</button></a><br/>
         <a href="data_pengaduan.php"><button>Histori/Data Pengaduan</button></a><br/>
     </div>
 </body>

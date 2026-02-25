@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'siswa') {
     header("Location: login.php");
     exit;
 }
@@ -68,7 +68,7 @@ if (!isset($_SESSION['username'])) {
 <body>
     <nav>
         <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/logo_mutu_png_transparant-removebg-preview-1.png">
-        <a href="login.php" class="logout">Logout</a>
+        <a href="logout.php" class="logout">Logout</a>
     </nav>
     <div>
         <p>

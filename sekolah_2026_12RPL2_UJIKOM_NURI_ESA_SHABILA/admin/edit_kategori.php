@@ -1,17 +1,15 @@
 <?php
 include '../koneksi.php';
 
-$nis = $_GET['nis'];
-$data = mysqli_query($koneksi, "SELECT * FROM user WHERE nis='$nis'");
+$id_kategori = $_GET['id_kategori'];
+$data = mysqli_query($koneksi, "SELECT * FROM kategori WHERE id_kategori='$id_kategori'");
 $row = mysqli_fetch_assoc($data);
 
 if (isset($_POST['submit'])) {
-     $nama = $_POST['username'];
-     $kelas = $_POST['kelas'];
+     $ket_kategori = $_POST['ket_kategori'];
 
-     mysqli_query($koneksi, "UPDATE user SET username='$nama',
-          kelas='$kelas' WHERE nis='$nis'");
-     header("Location: tambah_siswa.php");
+     mysqli_query($koneksi, "UPDATE kategori SET ket_kategori='$ket_kategori' WHERE id_kategori='$id_kategori'");
+     header("Location: tambah_kategori.php");
 }
 ?>
 
@@ -20,7 +18,7 @@ if (isset($_POST['submit'])) {
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>edit siswa</title>
+     <title>Edit Kategori</title>
      <style>
           body{
                background: linear-gradient(to right, #187bcd, #d0efff);
@@ -74,14 +72,11 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
      <div>
-          <h1>Edit data siswa</h1>
+          <h1>Edit Kategori</h1>
           <form method="POST">
 
-               <label for="">Username</label><br/>
-               <input type="text" name="username" value="<?php echo $row['username']; ?>"><br/>
-
-               <label for="">Kelas</label><br/>
-               <input type="text" name="kelas" value="<?php echo $row['kelas']; ?>"><br/>
+               <label for="">Nama Kategori</label><br/>
+               <input type="text" name="ket_kategori" value="<?php echo $row['ket_kategori']; ?>"><br/>
 
                <button type="submit" name="submit">Update</button>
           </form>

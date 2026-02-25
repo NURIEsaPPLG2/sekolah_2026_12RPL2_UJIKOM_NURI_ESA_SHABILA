@@ -73,11 +73,13 @@
      </nav>
      <p><b>HISTORI/DATA PENGADUAN</b></p>
 
-     <table border="1" cellpadding="10" cellspacing="0" class="tabel-data-admin">
+     
+
+     <table id="datatable" border="1" cellpadding="10" cellspacing="0" class="tabel-data-admin">
           <tr>
                <th>No</th>
                <th>ID Pengaduan</th>
-               <th>nis</nis>               
+               <th>nis</th>               
                <th>Nama Kategori</th>
                <th>Lokasi</th>
                <th>Keterangan</th>

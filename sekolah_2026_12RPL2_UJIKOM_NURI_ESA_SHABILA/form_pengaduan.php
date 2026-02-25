@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +41,9 @@
           select{
                margin-bottom: 15px;
           }
+          textarea{
+               resize: none;
+          }
           button{
                width: 90px;
                height: 50px;
@@ -74,10 +78,16 @@
           <form action="proses_pengaduan.php" method="post">
 
                <label for="">Kategori</label><br/>
+               <?php
+               include 'koneksi.php';
+               $query = mysqli_query($koneksi, "SELECT * FROM kategori");
+               ?>
                <select name="kategori" required>
-                    <option value="1">Fasilitas</option>
-                    <option value="2">Lingkungan</option>
-                    <option value="3">Pembelajaran</option>
+                    <?php while ($data = mysqli_fetch_assoc($query)) { ?>
+               
+                    <option value="<?= $data['id_kategori']; ?>"><?= $data['ket_kategori']; ?></option>
+
+                    <?php } ?>
                </select>
                <br/>
 
