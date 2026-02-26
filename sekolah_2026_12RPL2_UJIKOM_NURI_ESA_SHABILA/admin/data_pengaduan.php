@@ -14,6 +14,9 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>histori/data pengaduan</title>
+
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
+
      <style>
           body{
                margin: 0;
@@ -81,23 +84,25 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
           <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/logo_mutu_png_transparant-removebg-preview-1.png">
           <a href="dashboard_admin.php">Dashboard</a>
      </nav>
-     <p><b>HISTORI/DATA PENGADUAN</b></p>
 
-     
+     <p><b>HISTORI/DATA PENGADUAN</b></p> 
 
-     <table id="datatable" border="1" cellpadding="10" cellspacing="0" class="tabel-data-admin">
-          <tr>
-               <th>No</th>
-               <th>ID Pengaduan</th>
-               <th>nis</th>               
-               <th>Nama Kategori</th>
-               <th>Lokasi</th>
-               <th>Keterangan</th>
-               <th>Status</th>
-               <th>Tanggal</th>
-               <th>Feedback</th>
-               <th>Detail</th>
-          </tr>
+     <table id="datatable" class="tabel-data-admin">
+          <thead>
+               <tr>
+                    <th>No</th>
+                    <th>ID Pengaduan</th>
+                    <th>nis</th>               
+                    <th>Nama Kategori</th>
+                    <th>Lokasi</th>
+                    <th>Keterangan</th>
+                    <th>Status</th>
+                    <th>Tanggal</th>
+                    <th>Feedback</th>
+                    <th>Detail</th>
+               </tr>
+          </thead>
+          <tbody>
 
           <?php
           include '../koneksi.php';
@@ -126,7 +131,29 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
                </td>
           </tr>
           <?php } ?>
+
+          </tbody>
      </table>
+
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     
+     <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
+     <script>
+     $(document).ready(function() {
+         $('#datatable').DataTable({
+             "language": {
+                 "search": "Cari:",
+                 "lengthMenu": "Tampilkan _MENU_ data",
+                 "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+                 "paginate": {
+                     "next": "Selanjutnya",
+                     "previous": "Sebelumnya"
+                 }
+             }
+         });
+     });
+     </script>
 
 </body>
 </html>
