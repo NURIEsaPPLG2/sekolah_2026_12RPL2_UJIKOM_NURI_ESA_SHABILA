@@ -65,6 +65,16 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'siswa') {
      nav a:active{
           color: white;
      }
+     button{
+          background: #187bcd;
+          border: none;
+          padding: 8px;
+          color: white;
+          cursor: pointer;
+     }
+     button:active{
+          background: rgb(158, 158, 255);
+     }
 </style>
 </head>
 
@@ -87,6 +97,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'siswa') {
                     <th>Keterangan</th>
                     <th>Status</th>
                     <th>Feedback</th>
+                    <th>Detail</th>
                </tr>
           </thead>
           <tbody>
@@ -108,6 +119,11 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] != 'siswa') {
                <td><?php echo $data['keterangan']; ?></td>
                <td><?php echo $data['status']; ?></td>
                <td><?php echo $data['feedback']; ?></td>
+               <td>
+                    <a href="detail_pengaduan.php?id=<?= $data['id_pelaporan'] ?>">
+                         <button>Detail</button>
+                    </a>
+               </td>
           </tr>
           <?php } ?>
 
