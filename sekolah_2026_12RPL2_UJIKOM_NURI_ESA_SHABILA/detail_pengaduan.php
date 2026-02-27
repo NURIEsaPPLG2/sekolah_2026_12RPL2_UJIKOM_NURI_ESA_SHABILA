@@ -1,4 +1,11 @@
 <?php 
+
+session_start();
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'siswa') {
+    header("Location: login.php");
+    exit;
+}
+
 include 'koneksi.php';
 
 if (!isset($_GET['id'])) {
@@ -7,6 +14,7 @@ if (!isset($_GET['id'])) {
 }
 
 $id = $_GET['id'];
+
 
 $query = mysqli_query($koneksi, "SELECT input_aspirasi.*, kategori.ket_kategori
      FROM input_aspirasi LEFT JOIN kategori ON input_aspirasi.id_kategori = kategori.id_kategori
@@ -82,16 +90,17 @@ if (!$data) {
                display: flex;
                justify-content: space-between;
           }
-          button{
+          .btn-kembali{
                background: #187bcd;
                color: white;
-               border: none;
                padding: 10px 18px;
                border-radius: 8px;
-               cursor: pointer;
-               font-size: 14px;
+               text-decoration: none;
+               font-family: monospace;
+               font-size: 17px;
+               display: inline-block;
           }
-          button:active{
+          .btn-kembali:active{
                background: rgb(158, 158, 255);
           }
           a{
@@ -104,40 +113,37 @@ if (!$data) {
      <div class="container">
           <h2>Detail Pengaduan</h2>
 
-          <form>
-               <table>
-                    <tr>
-                         <td>ID Pelaporan:</td> 
-                         <td class="isi"><?= $data['id_pelaporan'] ?></td>
-                    </tr>
-                    <tr>
-                         <td>Kategori:</td>
-                         <td class="isi"><?= $data['ket_kategori'] ?></td>
-                    </tr>
-                    <tr>
-                         <td>Lokasi:</td>
-                         <td class="isi"><?= $data['lokasi'] ?></td>
-                    </tr>
-                    <tr>
-                         <td>Keterangan:</td>
-                         <td class="isi"><?= $data['keterangan'] ?></td>
-                    </tr>
+          <table>
+               <tr>
+                    <td>ID Pelaporan:</td> 
+                    <td class="isi"><?= $data['id_pelaporan'] ?></td>
+               </tr>
+               <tr>
+                    <td>Kategori:</td>
+                    <td class="isi"><?= $data['ket_kategori'] ?></td>
+               </tr>
+               <tr>
+                    <td>Lokasi:</td>
+                    <td class="isi"><?= $data['lokasi'] ?></td>
+               </tr>
+               <tr>
+                    <td>Keterangan:</td>
+                    <td class="isi"><?= $data['keterangan'] ?></td>
+               </tr>
+               <tr>
+                    <td>Status:</td>
+                    <td class="isi"><?= $data['status'] ?></td>                        
+               </tr>
+               <tr>
+                    <td>Feedback:</td>                      
+                    <td class="isi"><?= $data['feedback'] ? $data['feedback'] : '-' ?></td>
+               </tr>
+          </table>
 
-                    <tr>
-                         <td>Status:</td>
-                         <td class="isi"><?= $data['status'] ?></td>                        
-                    </tr>
-
-                    <tr>
-                         <td>Feedback:</td>                      
-                         <td class="isi"><?= $data['feedback'] ? $data['feedback'] : '-' ?></td>
-                    </tr>
-               </table>
-
-               <div class="actions">
-                    <button><a href="data_pengaduan.php">Kembali</a></button>                 
-               </div>
-          </form>
+          <div class="actions">
+               <a href="data_pengaduan.php" class="btn-kembali">Kembali</a>
+          </div>
+          
      </div>
 </body>
 </html>
